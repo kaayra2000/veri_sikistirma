@@ -241,19 +241,19 @@ dosya_adlari = ['row_row_rotate','column_column_rotate','zig_zag']
 
 
 for i in range(0,3):
-    if len(sys.argv) <= 1 or sys.argv[1] == "1":
+    if len(sys.argv) <= 1 or sys.argv[1] == "1"or sys.argv[1] == "-2":
         rle_image_compress_row_row(foto_adlari[i], f"{foto_yollari[i]}/{dosya_adlari[0]}.rle")
-    if len(sys.argv) <= 1 or sys.argv[1] == "-1" or sys.argv[1] == "0" or sys.argv[1] == "1" :
+    if len(sys.argv) <= 1 or (sys.argv[1] != "-2" and ( sys.argv[1] == "-1" or sys.argv[1] == "0" or sys.argv[1] == "1" )):
         rle_image_decompress_row_row(f"{foto_yollari[i]}/{dosya_adlari[0]}.rle")
 
 for i in range(0,3):
-    if len(sys.argv) <= 1 or sys.argv[1] == "2":
+    if len(sys.argv) <= 1 or sys.argv[1] == "2"or sys.argv[1] == "-2":
         rle_image_compress_column_column(foto_adlari[i], f"{foto_yollari[i]}/{dosya_adlari[1]}.rle")
-    if len(sys.argv) <= 1 or sys.argv[1] == "-1" or sys.argv[1] == "3" or sys.argv[1] == "2":
+    if len(sys.argv) <= 1 or (sys.argv[1] != "-2" and (sys.argv[1] == "-1" or sys.argv[1] == "3" or sys.argv[1] == "2")):
         rle_image_decompress_column_column(f"{foto_yollari[i]}/{dosya_adlari[1]}.rle")
 
 for i in range(0,3):
-    if len(sys.argv) <= 1 or sys.argv[1] == "4":
+    if len(sys.argv) <= 1 or sys.argv[1] == "4" or sys.argv[1] == "-2":
         rle_image_compress_zigzag(foto_adlari[i], f"{foto_yollari[i]}/{dosya_adlari[2]}.rle")
-    if len(sys.argv) <= 1 or sys.argv[1] == "-1" or sys.argv[1] == "4" or sys.argv[1] == "5":
+    if len(sys.argv) <= 1 or (sys.argv[1] != "-2" and (sys.argv[1] == "-1" or sys.argv[1] == "4" or sys.argv[1] == "5")):
         rle_image_decompress_zigzag(f"{foto_yollari[i]}/{dosya_adlari[2]}.rle")
